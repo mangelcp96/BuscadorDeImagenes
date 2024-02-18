@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador Imágenes Pixabay</title>
+    <title>Buscador de Imágenes</title>
     <link rel="stylesheet" href="css/tailwind.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1 class="text-center text-3xl text-white my-10 font-bold uppercase">Buscador de Imágenes</h1>
+<div class="container mx-auto px-4">
+    <h1 class="text-center text-4xl text-primary my-10 font-bold uppercase">Buscador de Imágenes</h1>
 
-    <div class="buscador max-w-lg mx-auto ">
-        <form id="formulario" class="">
-            <div>
-                <label 
-                    class="block text-white font-bold uppercase"
-                >Término Búsqueda</label>
-                <input 
-                    type="text"
-                    class="mt-3 rounded w-full p-2 "
-                    placeholder="Término de búsqueda. Ejemplo: Café o Futbol"
-                    id="termino"
-                />
-
-                <input 
-                    type="submit"
-                    value="Buscar Imágenes"
-                    class="mt-5 w-full py-2 bg-yellow-400 cursor-pointer font-bold uppercase hover:bg-yellow-500 rounded"
-                >   
+    <div class="max-w-lg mx-auto my-10">
+        <form id="formulario" class="buscador">
+            <div class="mb-5">
+                <label for="termino" class="text-lg text-secondary font-bold uppercase">Término de Búsqueda</label>
+                <input type="text" id="termino" class="input-text" placeholder="Ejemplo: Café o Fútbol"/>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="Buscar Imágenes" class="btn-submit"/>
             </div>
         </form>
     </div>
 
-    <div id="resultado" class="container mx-auto mt-10  flex flex-wrap"></div>
+    <div id="resultado" class="results-grid mt-10"></div>
 
-    <div id="paginacion" class="container mx-auto mb-10 text-center">
-        
-    </div>
+    <div id="paginacion" class="pagination-container text-center mt-10"></div>
+</div>
 
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
